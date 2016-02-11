@@ -1,0 +1,305 @@
+// _columns.scss
+// ==============
+
+/*! COLUMNS */
+
+#columns {
+	
+	@include breakpoint( $medium ) {
+		margin: 0 0px;
+	}
+	
+	.column {
+		
+		line-height: 4em;
+		padding: 0 10px 0 5px;
+		
+		border: none;
+		@include border-radius(5px);
+		
+		@include breakpoint( $medium ) {
+			padding-top: 10px;
+			margin-bottom: 10px;
+		} // breakpoint
+		
+		.header {
+			
+			border-bottom: 1px solid $lightBlue;
+			
+			margin-right: -10px;
+			margin-left: -5px;
+			margin-top: 10px;
+			
+			@include breakpoint( $medium ) {
+				
+				margin: 0 10px;
+			
+			} // breakpoint
+			
+			h2 {
+				text-align: center;
+				line-height: 1.5em;
+			} // h2
+		} // .header
+		
+		.price {
+			
+			height: 100px;
+			padding: 40px;
+			padding-bottom: 30px;
+			
+			p {
+				
+				margin-bottom: -10px;
+				
+				font-size: 4em;
+				font-weight: bold;
+				text-align: center;
+				
+				sup {
+					
+					font-weight: normal;
+					font-size: .5em;
+					
+					position: relative;
+					top: -30px;
+				
+				} // sup
+			} // p
+			
+			.smaller {
+				
+				font-size: 1.25em;
+				font-weight: normal;
+				
+			
+			} // .smaller
+		} // .price
+		
+		.long-number {
+		
+			display: block;
+			
+			@include breakpoint($medium) {
+				
+				display: none;
+			
+			} //  breakpoint
+		} // .long-number
+		
+		
+		.short-number {
+			
+			display: none;
+			
+			@include breakpoint($medium) {
+				
+				display: block;
+			
+			} //  breakpoint
+		
+		} // .short-number
+		
+		
+		.last-price p {
+			
+			font-size: 1.25em;
+			line-height: 1.8em;
+			font-weight: normal;
+			
+			
+			@include breakpoint($medium) {
+				
+				line-height: 3em;
+			
+			} // breakpoint
+		} // .last-price p
+		
+		.get {
+			
+			height: 60px;
+			
+			margin-top: -20px;
+			margin-left: 10px;
+			margin-right: 10px;
+			padding-right: 40px;
+			
+			@include breakpoint($medium) {
+					margin: 0 10px;
+					padding: 0;
+			}
+			
+			p {
+				
+				text-align: left;
+				font-size: 1.25em;
+				
+				@include breakpoint($medium) {
+					
+					text-align: center;
+					font-size: 1.1em;
+					
+				}
+				
+				u { font-size: 1em; } 
+				
+				strong {
+					
+					font-weight: bold;
+					font-size: 1em;
+				
+				} // strong
+			} // p
+		} // .get
+		
+		
+		ul {
+			
+			margin-top: 20px;
+			
+			li {
+				
+				font-size: 1em;
+				margin-left: 40px;
+				line-height: 2.5em;
+				
+			} // li
+		} // ul
+	} // .column
+	
+	
+	
+	.col-1 {
+		
+		ul > li:last-child p {
+				
+			color: $darkBlue;
+		
+		} // ul
+		
+	} // .col-1
+	
+	
+	.col-1, .col-3 {
+	
+		@include breakpoint($medium) {
+			
+			background: $lightBlue;
+		
+		} // breakpoint
+		
+		.header h2 {
+			
+			@include breakpoint( $medium ) {
+				
+				border-bottom: 1px solid $darkBlue;
+			
+			} // breakpoint
+			
+			
+		} // .header h2
+	
+		.get {
+			
+			border-bottom: 1px solid $darkBlue;
+		
+		} // .get
+		
+		ul {
+			
+			li {
+				
+				&::before {
+					
+					content: '';
+					
+					position: absolute;
+					@include inline-block;
+					left: 17px;
+					
+					width:20px;
+					height:20px;
+					
+					margin-top: 11px;
+					
+					background-image: url(../images/checkmark_dark.svg);
+					background-size: 20px 20px;
+					
+				} // before
+			} // li
+		} // ul
+	} // .col-1 .col-2
+	
+	
+	.col-2 {
+		
+		position: relative;
+		background: $darkBlue;
+		
+		@include breakpoint( $medium ) {
+			overflow: hidden;
+		} // breakpoint
+		
+		.pop {
+			display: none;
+			
+			@include breakpoint( $medium ) {
+				
+				
+				@include inline-block;
+				@include transform(rotate(-45deg));
+				
+				position: absolute;
+				top: 30px;
+				left: -57px;
+				
+				font-weight: bold;
+				
+				p {
+					height: 45px;
+					padding: 0 55px;
+					background: $lightBlue;
+					
+					font-size: .8em;
+					line-height: 45px;
+				} // p
+			} // breakpoint medium 
+		} // .pop
+		
+		.get {
+			
+			border-top: 1px solid $lightBlue;
+			border-bottom: 1px solid $lightBlue;
+			
+			@include breakpoint( $medium ) {
+				border-top: none;
+			}
+			
+			
+		} // .get
+		
+		ul {
+			
+			li {
+				
+				&::before {
+					content: '';
+					
+					position: absolute;
+					@include inline-block;
+					left: 17px;
+					
+					width:20px;
+					height:20px;
+					
+					margin-top: 11px;
+					
+					background-image: url(../images/checkmark_light.svg);
+					background-size: 20px 20px;
+				
+				} // before
+			} // li
+		} // ul
+	} // .col-2
+	
+} // #columns

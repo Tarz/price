@@ -1,0 +1,34 @@
+// _buttonstyles.scss
+// ==============
+
+
+/*! BUTTONSTYLES */
+
+.bluebutton {
+	
+	padding: 8px 15px;
+	
+	background-color:transparent;
+	
+	@include border-radius(5px);
+	border:1px solid  $lightBlue;
+	
+	color: $lightBlue;
+	text-decoration:none;
+	
+	font-size: .8em;
+	
+	cursor:pointer;
+	
+	@include breakpoint($medium) {
+		border:1px solid  $whiteText;
+		color: $whiteText;
+	}
+	
+	@include breakpoint($midSmall) {
+		padding: 4px 7px;
+	}
+	
+}
+
+

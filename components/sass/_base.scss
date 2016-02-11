@@ -1,0 +1,17 @@
+// _base.scss
+// ==============
+
+/*! BASE */
+
+h1, h2, li, p, strong, sub, sup, u, button {
+	color: $whiteText;
+	font-family: "Avenir Next";
+	font-size: 16px;
+	text-align: left;
+}
+
+h2 {
+	font-size: 1.5em;
+	font-weight:bold;
+}
+
