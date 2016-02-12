@@ -26,7 +26,7 @@ body {
 	
 	@include breakpoint( $small ) {
 		top: -280px;
-	}
+	} // breakpoint
 	
 	.column {
 	
@@ -35,7 +35,7 @@ body {
 		
 		width: auto;
 		min-width: 320px;
-		
+		max-width: 350px;
 		
 		@include breakpoint($medium) {
 			

@@ -1,6 +1,6 @@
 // _variables.scss
 // ==============
-
+//@include border-box-sizing; //uses border box sizing like the old IE...sweet.
 //Colors
 $imgGradient: #003e66;
 $imgGradStartAlpha: 0.75;
@@ -9,7 +9,7 @@ $darkBlue: #003e66;
 $whiteText: #fefefe; 
 
 //Breakpoints
-$medium:  max-width 1043px;
+$medium:  max-width 1073px;
 $small:  max-width 400px;
 $midSmall:  max-width 365px;
 $ultraSmall:  max-width 321px;
