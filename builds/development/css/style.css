@@ -263,6 +263,7 @@ body {
   #columns .column .get {
     margin: 0 10px;
     padding: 0;
+    font-size: .8em;
   }
 }
 #columns .column .get p {
